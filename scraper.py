@@ -6,7 +6,7 @@ import lxml.html
 def scrape_table(parameter_a):
     rows = parameter_a.cssselect("li.search-result")  # selects all <li> blocks within <ul class="results-list list-unstyled"> and puts in list variable 'rows'
 #     My guess is it knows to make a list variable because either 'cssselect' function has that written in or it does it automatically because there are multiple table rows
-    print rows
+    print len(rows)
     for row in rows:
         # Set up our data record - we'll need it later
         record = {}
